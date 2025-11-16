@@ -153,7 +153,9 @@ export function PremiumGallery() {
           </div>
 
           {/* Descripción con animación */}
-          <div className={`transition-all duration-1000 delay-3000 ${
+          <div 
+          style={{display:'none'}}
+          className={`transition-all duration-1000 delay-3000 ${
             isVisible 
               ? 'opacity-100 translate-y-0' 
               : 'opacity-0 -translate-y-12'
