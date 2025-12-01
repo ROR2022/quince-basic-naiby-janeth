@@ -6,10 +6,12 @@ export const quinceMainData = {
     quote:
       "La vida es un viaje mágico, y hoy celebro un capítulo especial lleno de sueños y esperanza.",
     backgroundCarrouselImages: [
-      "/images/quince1.jpeg",
-      "/images/quince2.jpeg",
-      "/images/quince3.jpeg",
-      "/images/quince4.jpeg",
+      "/images/ny08.png",
+      "/images/ny09.jpg",
+      "/images/ny10.jpg",
+      "/images/ny11.jpg",
+      "/images/ny12.jpg",
+      "/images/ny13.jpg",
     ],
   },
   welcomeSection: {

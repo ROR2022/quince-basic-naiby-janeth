@@ -3,6 +3,11 @@
 import { Sparkles } from "@/components/sparkles"
 import { useState, useEffect, Suspense } from "react"
 import { useSearchParams } from "next/navigation"
+import BackgroundCarrousel from "../sections/BackgroundCarrousel"
+import { quinceMainData } from "../sections/data/main-data"
+
+const { hero } = quinceMainData
+const backgroundImages = hero.backgroundCarrouselImages;
 
 
 interface SplashSceneProps {
@@ -10,7 +15,7 @@ interface SplashSceneProps {
 }
 
 function SplashSceneContent({ onStart }: SplashSceneProps) {
-  const [videoLoaded, setVideoLoaded] = useState(false)
+  const [videoLoaded, setVideoLoaded] = useState(true)
   const [videoError, setVideoError] = useState(false)
   const [dataInvitation, setDataInvitation] = useState<any>(null)
   const searchParams = useSearchParams()
@@ -82,7 +87,7 @@ function SplashSceneContent({ onStart }: SplashSceneProps) {
       className="relative w-full h-screen flex items-center justify-center cursor-pointer overflow-hidden"
     >
       {/* Video Background */}
-      <video
+      {/* <video
         autoPlay
         muted
         loop
@@ -97,7 +102,7 @@ function SplashSceneContent({ onStart }: SplashSceneProps) {
         }}
       >
         <source src="/video/kendra7.mp4" type="video/mp4" />
-        {/* Fallback gradient if video fails to load */}
+        
         <div 
           className="absolute inset-0 bg-gradient-to-br from-[#f5d5d8] via-[#e8c4c8] to-[#d4a5a8]"
           style={{
@@ -105,20 +110,19 @@ function SplashSceneContent({ onStart }: SplashSceneProps) {
             transition: 'opacity 0.5s ease-in-out'
           }}
         />
-      </video>
+      </video> */}
 
-      {/* Semi-transparent overlay for better text readability */}
-      <div className="absolute inset-0 z-10" />
+      <BackgroundCarrousel images={backgroundImages} />
 
       {/* Loading Indicator */}
-      {!videoLoaded && (
+      {/*!videoLoaded && (
         <div className="absolute inset-0 z-40 flex items-center justify-center bg-black/30">
           <div className="text-center space-y-4">
             <div className="animate-spin rounded-full h-16 w-16 border-4 border-pink-500 border-t-transparent mx-auto"></div>
             <p className="text-white text-lg font-semibold">Cargando experiencia...</p>
           </div>
         </div>
-      )}
+      )*/}
 
       <Sparkles count={30} />
 
