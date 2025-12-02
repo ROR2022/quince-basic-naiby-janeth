@@ -158,7 +158,7 @@ function SplashSceneContent({ onStart }: SplashSceneProps) {
             </div>
             <div className="relative my-8">
               <h3 className="text-white font-semibold text-xl md:text-2xl">!Mis XV Años!</h3>
-              <h1 className="text-amber-500 font-main-text font-bold text-5xl md:text-7xl">Naiby Janeth</h1>
+              <h1 className="text-amber-500 font-main-text font-bold text-5xl md:text-7xl">Naiby Yaneth</h1>
             </div>
             <p className="relative text-2xl md:text-3xl text-white font-medium animate-pulse drop-shadow-lg">
               ✨ Toca para comenzar ✨
